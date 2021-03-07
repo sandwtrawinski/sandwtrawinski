@@ -33,7 +33,6 @@
 								<li><a href="#our_story">Our Story</a></li>
 								<li><a href="#rsvp">RSVP</a></li>
 								<li><a href="#gallery">Gallery</a></li>
-								<li><a href="https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/549954000?eventType=Wedding" target="_blank">Registry</a></li>
 							</ul>
 						</nav>
 					</header>
@@ -45,7 +44,6 @@
 							<article id="our_story">
 								<h2 class="major">Our Story</h2>
 								<p></p>
-								<span class="image main"><img src="images/IMG_1034.jpg" alt="" /></span>
 							</article>
 
 
@@ -53,6 +51,8 @@
 							<article id="gallery">
 								<h2 class="major">Gallery</h2>
 								<span class="image main"><img src="images/IMG_1034.jpg" alt="" /></span>
+								<span class="image main"><img src="images/DSC_1679.JPG" alt="" /></span>
+								<span class="image main"><img src="images/IMG_5426.jpeg" alt="" /></span>
 									
 							</article>
 
@@ -61,20 +61,32 @@
 							<article id="rsvp">
 								<h2 class="major">RSVP Here</h2>
 								<form class="gform" method="POST" action=
-                    "https://script.google.com/macros/s/AKfycby3RwyJmqQJhX2_isOekscY3EOO-jActFVsrhSuqGwd9u1hVofQYc-y1g/exec">
+                    "https://script.google.com/macros/s/AKfycby3RwyJmqQJhX2_isOekscY3EOO-jActFVsrhSuqGwd9u1hVofQYc-y1g/exec" target="_blank">
 									<div class="fields">
-										<div class="field">
+										<div class="field half">
 											<label for="name">Invite Code</label>
-											<input type="text" name="invite_code" id="invite_code" placeholder="* Found on invitation" />
+												<input type="text" name="invite_code" id="invite_code" placeholder="* Found on invitation" required/>
 										</div>
-										<div class="field">
+										<div class="field half">
+											<label for="demo-category">Accepts/Declines</label>
+											<select name="accepts_declines" id="demo-category">
+												<option value="Accept">Accepts</option>
+												<option value="Decline">Declines</option>
+											</select>
+										</div>
+										<div class="field half">
 											<label for="email">Email</label>
-											<input type="text" name="email" id="email" placeholder="* You will recieve a confirmation email" />
+											<input type="text" name="email" id="email" placeholder="* You will recieve a confirmation" required/>
+										</div>
+										<div class="field half">
+											<label for="num_attending">Number Attending</label>
+											<input type="text" name="num_attending" id="num_attending" onkeypress="return onlyNumberKey(event)" required/>
 										</div>
 										<div class="field">
-											<label for="message">Names of Those Attending</label>
-											<textarea name="name" id="name" rows="4" placeholder="* If a name is unknown, write &ldquo;Guest&ldquo;"></textarea>
+											<label for="message">Names</label>
+											<textarea name="name" id="name" rows="4" placeholder="* If a name is unknown, write &ldquo;Guest&ldquo;" required></textarea>
 										</div>
+										
 										<div class="field">
 											<label for="text">Song Request</label>
 											<input type="text" name="song_request" id="song_request" />
@@ -86,7 +98,6 @@
 									</ul>
 								</form>
 							</article>
-
 
 						
 
@@ -108,6 +119,15 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/prevent_enter.js"></script>
+			<script> 
+				function onlyNumberKey(evt) { 
+					var ASCIICode = (evt.which) ? evt.which : evt.keyCode 
+					if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) 
+						return false; 
+					return true; 
+				} 
+			</script> 
 
 			
 
