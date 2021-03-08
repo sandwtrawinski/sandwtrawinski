@@ -61,7 +61,8 @@
 							<article id="rsvp">
 								<h2 class="major">RSVP Here</h2>
 								<form class="gform" method="POST" action=
-                    "https://script.google.com/macros/s/AKfycby3RwyJmqQJhX2_isOekscY3EOO-jActFVsrhSuqGwd9u1hVofQYc-y1g/exec" target="_blank">
+                    "https://script.google.com/macros/s/AKfycby3RwyJmqQJhX2_isOekscY3EOO-jActFVsrhSuqGwd9u1hVofQYc-y1g/exec" target="_blank" 
+					onsubmit="setTimeout(function(){window.location.reload();},10);">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Invite Code</label>
@@ -69,7 +70,7 @@
 										</div>
 										<div class="field half">
 											<label for="demo-category">Accepts/Declines</label>
-											<select name="accepts_declines" id="demo-category">
+											<select name="accepts_declines" id="accepts_declines">
 												<option value="Accept">Accepts</option>
 												<option value="Decline">Declines</option>
 											</select>
